@@ -1,0 +1,9 @@
+Open a screen and write the following exactly in order.
+
+display=`id -u`
+
+Xvfb :${display} -screen 0 1024x768x24 &
+
+export DISPLAY=:${display}
+
+java -jar yourProgram.jar
